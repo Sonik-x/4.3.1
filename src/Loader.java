@@ -4,15 +4,15 @@ public class Loader {
 
 
     public static void main(String[] args) {
-        int trackCapacity = 2;
+        int trackCapacity = 12;
         int containerCapacity = 27;
 
 
         Scanner scanner = new Scanner(System.in);
 
         int boxesNumber = scanner.nextInt();
-        long containersNumber = (int) (boxesNumber / ((float) containerCapacity) + 0.5);
-        long tracksNumber = (int) (containersNumber / ((float) trackCapacity) + 0.5);
+        long containersNumber = Math.round(boxesNumber / ((float) containerCapacity) + 0.49);
+        long tracksNumber = Math.round(containersNumber / ((float) trackCapacity) + 0.49);
 
         int numberOfBox = 0;
         int numberOfContainer = 0;
